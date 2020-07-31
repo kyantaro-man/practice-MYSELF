@@ -1,6 +1,33 @@
 %header.Header
   .Header__left
-    .Header__left__menu
-      = icon
+    .Menu
+      = icon('fas', 'bars', class: 'Menu-icon')
+    .Title
+      .Title__left
+        = icon('fas', 'user-edit', class: 'Title-icon')
+      .Title__right
+        %span.Title-text SELFNOTE
   .Header__center
+    .Search
+      %form.Search__form
+        .Search__form__left
+          = icon('fas', 'search', class: 'Search__form-icon')
+        .Search__form__center
+          %input.Search__form-text{type: 'search', placeholder: 'ここに入力して検索'}
+        .Search__form__right
+          = icon('far', 'times-circle', class: 'Search__form-delete')
+    .Sub
+      .Sub__left
+        = icon('fas', 'redo-alt', class: 'Sub-reload')
+      .Sub__center
+        = icon('fas', 'equals', class: 'Sub-display')
+      .Sub__right
+        = icon('fas', 'cog', class: 'Sub-option')
   .Header__right
+    .User
+      .User__left
+        = link_to "#", class: "User-link" do
+          = icon('fas', 'id-card', class: 'User-icon')
+      .User__right
+        = link_to "#", class: "User-name" do
+          kyantaro

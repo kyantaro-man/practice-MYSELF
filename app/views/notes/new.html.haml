@@ -1,0 +1,27 @@
+= render partial: 'layouts/header'
+.container
+  = render partial: 'layouts/sidebar'
+  .Main
+    = form_with model: [@user, @note], html: {class: "NoteForm"}, local: true do |f|
+      %h3.NoteForm-title 日記の入力欄
+      .NoteForm__top
+        = f.label :date, "日付"
+        = f.text_field :date, class: "NoteForm--small"
+        = f.label :title, "タイトル"
+        = f.text_field :title, class: "NoteForm--small"
+        = f.label :quotation, "良い言葉"
+        = f.text_field :quotation, class: "NoteForm--small"
+        = f.label :effort, "頑張ったこと"
+        = f.text_field :effort, class: "NoteForm--small"
+        = f.label :achievement, "できるようになったこと"
+        = f.text_field :achievement, class: "NoteForm--small"
+        = f.label :todo, "明日やること"
+        = f.text_field :todo, class: "NoteForm--small"
+        = f.label :free, "自由欄"
+        = f.text_field :free, class: "NoteForm--small"
+        = f.label :memo, "メモ"
+        = f.text_area :memo, class: "NoteForm--large"
+      .NoteForm__bottom
+        = button_to "戻る", :back, method: :get, class: "NoteForm-btn"
+        = f.submit "保存", class: "NoteForm-btn"
+

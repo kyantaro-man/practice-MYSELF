@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_080250) do
+ActiveRecord::Schema.define(version: 2020_08_01_055204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "notes", force: :cascade do |t|
+    t.string "date"
+    t.string "title"
+    t.string "quotation"
+    t.string "effort"
+    t.string "achievement"
+    t.string "todo"
+    t.string "free"
+    t.text "memo"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -29,4 +44,5 @@ ActiveRecord::Schema.define(version: 2020_07_31_080250) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "notes", "users"
 end

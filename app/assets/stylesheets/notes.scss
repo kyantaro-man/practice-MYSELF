@@ -1,6 +1,7 @@
 $cNoteBorder: #b59658;
 $cBgNote: #b59658;
 $cFontNote: #333;
+$cFontNoteNew: #b59658;
 $cNoteFormBorder: #333;
 $cBgNoteForm: #b59658;
 $cFontNoteForm: #333;
@@ -16,8 +17,12 @@ $cFontNoteForm: #333;
   }
 
   &-btn {
+    display: inline-block;
+    width: 500px;
     padding: 12px 40px;
     border: 3px solid $cNoteBorder;
+    text-decoration: none;
+    color: $cFontNoteNew;
 
     &-icon {
       margin-right: 20px;

@@ -1,0 +1,24 @@
+%aside.Sidebar
+  .Sidebar__top
+    .MenuBox
+      .MenuBox-icon
+        = icon('fas', 'user-edit', class: '')
+        %span.MenuBox-text SelfNote
+    .MenuBox
+      .MenuBox-icon
+        = icon('fas', 'user-edit', class: '')
+      %span.MenuBox-text SelfNote
+    .MenuBox
+      .MenuBox-icon
+        = icon('fas', 'user-edit', class: '')
+      %span.MenuBox-text SelfNote
+  .Sidebar__bottom
+    .Rule
+      = link_to "#", class: "Rule__link" do
+        プライバシー
+      %span ・
+      = link_to "#", class: "Rule__link" do
+        利用規約
+      %br
+      = link_to "#", class: "Rule__link" do
+        オープンソースライセンス

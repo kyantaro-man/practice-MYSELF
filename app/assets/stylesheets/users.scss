@@ -1,3 +1,56 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$cBook: #c1541c;
+
+.Book {
+  height: 640px;
+  width: 400px;
+  margin: 80px auto;
+  background-color: white;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    transform: perspective(2000px);
+    z-index: 2;
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+  }
+
+  &-cover {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    position: relative;
+    transition: 1s;
+    transform-origin: left;
+    z-index: 1;
+    background-color: $cBook;
+
+    &-title {
+      font-size: 48px;
+    }
+  }
+
+  &:hover .Book-cover {
+    transform: rotateY(-135deg);
+  }
+
+  &-details {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-title {
+      border-bottom: 4px solid #000;
+    }
+
+    &-contents {
+      padding: 20px 10px 0;
+      font-size: 18px;
+    }
+  }
+}

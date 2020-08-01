@@ -1,0 +1,230 @@
+$cBgHead: #391d2b;
+$cBorder: #d5a417;
+$cFont: #b59658;
+$cHoverIcon: #546474;
+
+.Header {
+  padding: 8px;
+  border-bottom: 5px solid $cBorder;
+  background-color: $cBgHead;
+  color: $cFont;
+  font-size: 24px;
+  display: flex;
+
+  &__left {
+    width: 232px;
+    padding-right: 30px;
+    display: flex;
+  }
+
+  &__center {
+    min-width: 399px;
+    width: calc(100vw - 300px);
+    display: flex;
+  }
+
+  &__right {
+    width: 184px;
+  }
+}
+
+.Menu {
+  height: 48px;
+  width: 48px;
+  margin: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $cHoverIcon;
+  }
+
+  &-icon {
+  }
+}
+
+.Title {
+  padding: 0 4px;
+  display: flex;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: $cHoverIcon;
+  }
+
+  &__left {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-icon {
+    font-size: 24px;
+  }
+
+  &__right {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-text {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.Search {
+  min-width: 255px;
+  width: calc(100% - 144px);
+  padding: 0 10px;
+  display: flex;
+  font-size: 16px;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    border: 4px solid $cBorder;
+
+    &__left {
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-icon {
+    }
+
+    &__center {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      width: 100%;
+      background-color: $cBgHead;
+      border: none;
+      &:focus {
+        outline: 0;
+      }
+      &::placeholder {
+        color: $cFont;
+      }
+    }
+
+    &__right {
+      width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-delete {
+    }
+  }
+}
+
+.Sub {
+  display: flex;
+
+  &__left {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: $cHoverIcon;
+    }
+  }
+
+  &-reload {
+  }
+
+  &__center {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: $cHoverIcon;
+    }
+  }
+
+  &-display {
+  }
+
+  &__right {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: $cHoverIcon;
+    }
+  }
+
+  &-option {
+  }
+}
+
+.User {
+  display: flex;
+  padding: 0 16px;
+
+  &__left {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background-color: $cHoverIcon;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $cFont;
+  }
+
+  &-icon {
+  }
+
+  &__right {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-name {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $cFont;
+    padding: 0 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $cHoverIcon;
+    }
+  }
+}

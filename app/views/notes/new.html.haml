@@ -22,6 +22,6 @@
         = f.label :memo, "メモ"
         = f.text_area :memo, class: "NoteForm--large"
       .NoteForm__bottom
-        = button_to "戻る", :back, method: :get, class: "NoteForm-btn"
+        = link_to "戻る", user_notes_path, class: "NoteForm-btn" 
         = f.submit "保存", class: "NoteForm-btn"
 

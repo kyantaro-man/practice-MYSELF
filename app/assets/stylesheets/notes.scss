@@ -5,6 +5,8 @@ $cFontNoteNew: #b59658;
 $cNoteFormBorder: #333;
 $cBgNoteForm: #b59658;
 $cFontNoteForm: #333;
+$cBgNoteFormBtn: #546474;
+$cFontNoteFormBtn: #b59658;
 
 .Note {
   height: 720px;
@@ -103,7 +105,14 @@ $cFontNoteForm: #333;
   &-btn {
     height: 42px;
     width: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 16px;
+    border: 1px solid $cNoteFormBorder;
     border-radius: 50%;
+    background-color: $cBgNoteFormBtn;
+    text-decoration: none;
+    color: $cFontNoteFormBtn;
   }
 }

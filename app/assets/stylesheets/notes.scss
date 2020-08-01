@@ -1,0 +1,59 @@
+$cNoteBorder: #b59658;
+$cBgNote: #b59658;
+$cFontNote: #333;
+
+.Note {
+  height: 720px;
+  width: 500px;
+  margin: 80px auto;
+  font-size: 16px;
+
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &-btn {
+    padding: 12px 40px;
+    border: 3px solid $cNoteBorder;
+
+    &-icon {
+      margin-right: 20px;
+    }
+  }
+
+  &__bottom {
+    height: calc(100% - 114px);
+    overflow: scroll;
+  }
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    margin-bottom: 3px;
+    border: 1px solid $cNoteBorder;
+    background-color: $cBgNote;
+    color: $cFontNote;
+
+    &__left {
+      display: flex;
+      align-items: center;
+    }
+
+    &__right {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: $cHoverIcon;
+      }
+    }
+
+    &-icon {
+      font-size: 36px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 .Main {
+  height: calc(100vh - 64px);
   width: calc(100vw - 280px);
   font-size: 24px;
   color: $cFont;
+  overflow: scroll;
 }

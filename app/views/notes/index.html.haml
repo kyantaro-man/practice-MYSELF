@@ -4,9 +4,9 @@
   .Main
     .Note
       .Note__top
-        .Note-btn
+        = link_to new_user_note_path, class: "Note-btn" do
           = icon('fas', 'pen', class: 'Note-btn-icon')
-          ノートを入力
+          枠内をクリックしてノートを入力
       .Note__bottom
         .Note-box
           .Note-box__left

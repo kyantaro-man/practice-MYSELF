@@ -1,0 +1,72 @@
+$cBgSide: #ab045c;
+
+.Sidebar {
+  height: calc(100vh - 64px);
+  width: 280px;
+  padding-top: 8px;
+  border-right: 5px solid $cBorder;
+  color: $cFont;
+  font-size: 24px;
+  background-color: $cBgSide;
+
+  &__top {
+    height: calc(100% - 78px);
+  }
+
+  &__bottom {
+    height: 78px;
+    padding: 20px 0 12px;
+    border-top: 5px solid $cBorder;
+  }
+}
+
+.MenuBox {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  margin-bottom: 8px;
+  border-radius: 0 25px 25px 0;
+  position: relative;
+
+  &-icon {
+    height: 48px;
+    width: 48px;
+    margin: 0 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: $cHoverIcon;
+  }
+
+  &-text {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    padding-left: 32px;
+    border-radius: 25px;
+    position: absolute;
+    left: 74px;
+    transform: translateX(-200%);
+    transition: transform 0.5s;
+  }
+
+  &:hover span {
+    transform: none;
+    background-color: $cHoverIcon;
+  }
+}
+
+.Rule {
+  padding: 4px 0 6px 24px;
+  font-size: 12px;
+
+  &__link {
+    text-decoration: none;
+    color: $cFont;
+  }
+}

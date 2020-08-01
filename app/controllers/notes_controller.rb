@@ -2,6 +2,8 @@ class NotesController < ApplicationController
   before_action :set_user
 
   def index
+    @note = Note.new
+    @notes = @user.notes
   end
 
   def new

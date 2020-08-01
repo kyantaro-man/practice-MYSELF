@@ -3,7 +3,7 @@ class NotesController < ApplicationController
 
   def index
     @note = Note.new
-    @notes = @user.notes
+    @notes = @user.notes.order(id: "DESC")
   end
 
   def new

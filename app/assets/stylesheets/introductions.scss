@@ -1,3 +1,60 @@
-// Place all the styles related to the introductions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$cIntroBorder: #b59658;
+$cBgIntroTime: #546474;
+$cBgIntroItem: #b59658;
+$cFontIntroItem: #333;
+
+.Introductions {
+  height: 720px;
+  width: 600px;
+  padding: 16px;
+  margin: 80px auto;
+  border: 6px solid $cIntroBorder;
+  font-size: 20px;
+
+  &__top {
+    height: calc(100% * 3 / 7);
+    display: flex;
+  }
+
+  &__bottom {
+    height: calc(100% * 2 / 7);
+    padding-top: 16px;
+    border-top: 2px solid $cIntroBorder;
+    display: flex;
+  }
+
+  &__left {
+    width: 196px;
+  }
+
+  &-time {
+    height: 48px;
+    width: 84px;
+    border: 3px solid $cIntroBorder;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cBgIntroTime;
+  }
+
+  &-text {
+    font-size: 14px;
+  }
+
+  &__right {
+    padding-top: 8px;
+  }
+
+  &-item {
+    height: 48px;
+    width: 360px;
+    padding-left: 4px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: $cBgIntroItem;
+    color: $cFontIntroItem;
+  }
+}

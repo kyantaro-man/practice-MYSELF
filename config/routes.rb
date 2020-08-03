@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   resources :users, only: :show do
     resources :notes, only: [:index, :new, :create]
-    resources :introductions, only: [:index]
+    resources :introductions, only: [:index, :edit, :update]
   end
   
 end

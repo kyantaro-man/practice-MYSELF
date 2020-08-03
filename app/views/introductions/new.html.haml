@@ -1,0 +1,14 @@
+= render partial: 'layouts/header'
+.container
+  = render partial: 'layouts/sidebar'
+  .Main
+    %form.IntroductionForm
+      %h2.IntroductionForm__top 自己紹介文作成
+      .IntroductionForm__middle
+        %label.IntroductionForm-label タイトル
+        %input.IntroductionForm-input
+        %label.IntroductionForm-label 自己紹介文
+        %textarea.IntroductionForm-textarea
+      .IntroductionForm__bottom
+        = link_to "戻る", "#", class: "IntroductionForm-btn"
+        %button.IntroductionForm-btn 保存

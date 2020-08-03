@@ -2,6 +2,9 @@ $cIntroBorder: #b59658;
 $cBgIntroTime: #546474;
 $cBgIntroItem: #b59658;
 $cFontIntroItem: #333;
+$cIntroFormBorder: #333;
+$cBgIntroFormBtn: #546474;
+$cFontIntroFormBtn: #b59658;
 
 .Introductions {
   height: 720px;
@@ -56,5 +59,55 @@ $cFontIntroItem: #333;
     font-size: 16px;
     background-color: $cBgIntroItem;
     color: $cFontIntroItem;
+  }
+}
+
+.IntroductionForm {
+  height: 720px;
+  width: 600px;
+  padding: 16px;
+  margin: 80px auto;
+  border: 6px solid;
+
+  &__top {
+    border-bottom: 2px solid $cIntroFormBorder;
+  }
+
+  &__middle {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-label {
+    margin-top: 16px;
+  }
+
+  &-input {
+    width: calc(300% / 4);
+  }
+
+  &-textarea {
+    height: 420px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 8px 0 0;
+  }
+
+  &-btn {
+    height: 42px;
+    width: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    border: 1px solid $cIntroFormBorder;
+    border-radius: 50%;
+    background-color: $cBgIntroFormBtn;
+    text-decoration: none;
+    color: $cFontNoteFormBtn;
   }
 }

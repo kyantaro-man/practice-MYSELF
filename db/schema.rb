@@ -16,13 +16,8 @@ ActiveRecord::Schema.define(version: 2020_08_02_231509) do
   enable_extension "plpgsql"
 
   create_table "introductions", force: :cascade do |t|
-    t.text "short1"
-    t.text "short2"
-    t.text "short3"
-    t.text "long1"
-    t.text "long2"
-    t.text "free1"
-    t.text "free2"
+    t.string "title"
+    t.text "content"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

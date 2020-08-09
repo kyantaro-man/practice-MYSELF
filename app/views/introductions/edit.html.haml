@@ -2,13 +2,13 @@
 .container
   = render partial: 'layouts/sidebar'
   .Main
-    %form.IntroductionForm
+    = form_with model: @user, class: "IntroductionForm" do |f|
       %h2.IntroductionForm__top 自己紹介文編集
       .IntroductionForm__middle
-        %label.IntroductionForm-label タイトル
-        %input.IntroductionForm-input
-        %label.IntroductionForm-label 自己紹介文
-        %textarea.IntroductionForm-textarea
+        = f.label :title, "タイトル", class: "IntroductionForm-label"
+        = f.text_field :title, class: "IntroductionForm-input"
+        = f.label :content, "自己紹介文", class: "IntroductionForm-label"
+        = f.text_area :content, class: "IntroductionForm-textarea"
       .IntroductionForm__bottom
         = link_to "戻る", "#", class: "IntroductionForm-btn"
-        %button.IntroductionForm-btn 保存
+        = f.submit "保存", class: "IntroductionForm-btn"

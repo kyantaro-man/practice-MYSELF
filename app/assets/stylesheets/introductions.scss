@@ -60,6 +60,10 @@ $cFontIntroFormBtn: #b59658;
     background-color: $cBgIntroItem;
     color: $cFontIntroItem;
   }
+
+  &-link {
+    text-decoration: none;
+  }
 }
 
 .IntroductionForm {

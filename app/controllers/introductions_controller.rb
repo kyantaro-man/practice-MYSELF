@@ -23,7 +23,6 @@ class IntroductionsController < ApplicationController
   end
 
   def edit
-    @introduction = Introduction.where(user_id: current_user.id).first
   end
 
   def update

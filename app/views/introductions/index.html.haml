@@ -2,26 +2,73 @@
 .container
   = render partial: 'layouts/sidebar'
   .Main
+    アプリの仕様上、上から順に完成させてください！
     .Introductions
       .Introductions__top
         .Introductions__left
           .Introductions-time 30秒用
           %span.Introductions-text (文字数150〜200字)
         .Introductions__right
-          .Introductions-item ①タイトル
-          .Introductions-item ②タイトル
-          .Introductions-item ③タイトル
+          - @introductions1.each do |introduction|
+            - if introduction.id.present?
+              = link_to edit_user_introduction_path(current_user.id, introduction.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+                  = introduction.title
+          - if @introductions1.length == 0
+            - 3.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+          - if @introductions1.length == 1
+            - 2.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+          - if @introductions1.length == 2
+            - 1.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
       .Introductions__bottom
         .Introductions__left
           .Introductions-time 1分用
           %span.Introductions-text (文字数300〜400字)
         .Introductions__right
-          .Introductions-item ①タイトル
-          .Introductions-item ②タイトル
+          - @introductions2.each do |introduction|
+            - if introduction.id.present?
+              = link_to edit_user_introduction_path(current_user.id, introduction.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+                  = introduction.title
+          - if @introductions2.length == 0
+            - 2.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+          - if @introductions2.length == 1
+            - 1.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
       .Introductions__bottom
         .Introductions__left
           .Introductions-time 自由欄
           %span.Introductions-text 好きなように書こう！
         .Introductions__right
-          .Introductions-item ①タイトル
-          .Introductions-item ②タイトル
+          - @introductions3.each do |introduction|
+            - if introduction.id.present?
+              = link_to edit_user_introduction_path(current_user.id, introduction.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+                  = introduction.title
+          - if @introductions3.length == 0
+            - 2.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:
+          - if @introductions3.length == 1
+            - 1.times do 
+              = link_to new_user_introduction_path(current_user.id), class: "Introductions-link" do
+                .Introductions-item
+                  タイトル:

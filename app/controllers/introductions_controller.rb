@@ -2,6 +2,9 @@ class IntroductionsController < ApplicationController
   before_action :set_user
 
   def index
+    @introductions1 = Introduction.where(user_id: current_user.id).first(3)
+    @introductions2 = Introduction.where(user_id: current_user.id).limit(2).offset(3)
+    @introductions3 = Introduction.where(user_id: current_user.id).limit(2).offset(5)
   end
 
   def new

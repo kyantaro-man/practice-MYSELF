@@ -4,10 +4,11 @@
       .MenuBox-icon
         = icon('fas', 'user-edit', class: '')
         %span.MenuBox-text SelfNote
-    .MenuBox
-      .MenuBox-icon
-        = icon('fas', 'user-edit', class: '')
-      %span.MenuBox-text SelfNote
+    = link_to user_introductions_path(current_user.id), class: "MenuBox-link" do
+      .MenuBox
+        .MenuBox-icon
+          = icon('fas', 'user-edit', class: '')
+        %span.MenuBox-text INTRODUCTIONS
     .MenuBox
       .MenuBox-icon
         = icon('fas', 'user-edit', class: '')

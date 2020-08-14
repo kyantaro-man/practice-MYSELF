@@ -1,25 +1,30 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :username
-    %br/
-    = f.text_field :username, autofocus: true, autocomplete: "username"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.Devise
+  .Devise__left
+    %h2.Devise__left-title Create YourNote
+    .Devise__left-link
+      = render "devise/shared/links"
+  .Devise__right
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "DeviseForm" }) do |f|
+      .DeviseForm-title MYSELF
+      = render "devise/shared/error_messages", resource: resource
+      .DeviseForm-field
+        = f.label :username, class: "DeviseForm-text"
+        %br/
+        = f.text_field :username, autofocus: true, autocomplete: "username", class: "DeviseForm-input"
+      .DeviseForm-field
+        = f.label :email, class: "DeviseForm-text"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "DeviseForm-input"
+      .DeviseForm-field
+        = f.label :password, class: "DeviseForm-text"
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} 文字以上)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: "DeviseForm-input"
+      .DeviseForm-field
+        = f.label :password_confirmation, class: "DeviseForm-text"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "DeviseForm-input"
+      .actions
+        = f.submit "Sign up", class: "DeviseForm-submit"

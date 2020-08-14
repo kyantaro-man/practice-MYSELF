@@ -1,17 +1,18 @@
 %aside.Sidebar
   .Sidebar__top
-    .MenuBox
-      .MenuBox-icon
-        = icon('fas', 'user-edit', class: '')
-        %span.MenuBox-text SelfNote
+    = link_to user_notes_path(current_user.id), class: "MenuBox-link" do
+      .MenuBox
+        .MenuBox-icon
+          = icon('fas', 'user-edit')
+        %span.MenuBox-text NOTES
     = link_to user_introductions_path(current_user.id), class: "MenuBox-link" do
       .MenuBox
         .MenuBox-icon
-          = icon('fas', 'user-edit', class: '')
+          = icon('fas', 'user-edit')
         %span.MenuBox-text INTRODUCTIONS
     .MenuBox
       .MenuBox-icon
-        = icon('fas', 'user-edit', class: '')
+        = icon('fas', 'user-edit')
       %span.MenuBox-text SelfNote
   .Sidebar__bottom
     .Rule

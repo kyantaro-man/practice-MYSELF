@@ -85,6 +85,12 @@ $cBorderNoteBox: #333;
     &-content {
       font-size: 18px;
     }
+
+    &-btns {
+      display: flex;
+      justify-content: flex-end;
+      padding: 4px 0;
+    }
   }
 }
 

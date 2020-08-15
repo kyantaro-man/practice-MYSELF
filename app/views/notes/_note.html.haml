@@ -2,7 +2,33 @@
   .Note-box__left
     日付:
     = note.date
+    %br
     タイトル:
     = note.title
   .Note-box__right
     = icon("fas", "caret-down", class: "Note-box-icon")
+.Note-box__bottom
+  .Note-box-item
+    良い言葉:
+    %span.Note-box-content
+      = note.quotation
+  .Note-box-item
+    頑張ったこと:
+    %span.Note-box-content
+      = note.effort
+  .Note-box-item
+    できるようになったこと:
+    %span.Note-box-content
+      = note.achievement
+  .Note-box-item
+    明日やること:
+    %span.Note-box-content
+      = note.todo
+  .Note-box-item
+    自由欄:
+    %span.Note-box-content
+      = note.free
+  .Note-box-item
+    メモ:
+    %span.Note-box-content
+      = note.memo

@@ -49,8 +49,14 @@ $cBlack: #333;
       border-bottom: 4px solid $cBlack;
     }
 
+    &-subtitle {
+      font-size: 24px;
+      margin-top: 10px;
+      border-bottom: 2px solid $cBlack;
+    }
+
     &-contents {
-      padding: 20px 10px 0;
+      padding: 10px 10px 0;
       font-size: 18px;
     }
   }

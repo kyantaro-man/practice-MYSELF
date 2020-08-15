@@ -23,9 +23,16 @@ class IntroductionsController < ApplicationController
   end
 
   def edit
+    @introduction = @user.introductions.find(params[:id])
   end
 
   def update
+    @introduction = @user.introductions.find(params[:id])
+    if @introduction.update(introduction_params)
+      redirect_to user_introductions_path(current_user.id), notice: "自己紹介文を更新しました"
+    else
+      render :edit
+    end
   end
 
   private

@@ -1,0 +1,15 @@
+.OptionModal
+  .OptionModal__background
+  .OptionModal__content
+    %h2 設定
+    .OptionModal__item
+      %h3 カラー
+      .ColorBox
+        = button_to "デフォルト", class: "ColorBox-btn"
+        = button_to "ポップ", class: "ColorBox-btn"
+        = button_to "キュート", class: "ColorBox-btn"
+        = button_to "カジュアル", class: "ColorBox-btn"
+        = button_to "インパクト", class: "ColorBox-btn"
+    .OptionModal__item
+      %h3 フォント
+    = link_to "閉じる", class: "OptionModal__close"

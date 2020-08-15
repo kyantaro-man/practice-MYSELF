@@ -23,6 +23,7 @@ class IntroductionsController < ApplicationController
   end
 
   def edit
+    @introduction = @user.introductions.find(params[:id])
   end
 
   def update

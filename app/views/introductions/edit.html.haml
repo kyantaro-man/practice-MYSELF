@@ -2,7 +2,7 @@
 .container
   = render partial: 'layouts/sidebar'
   .Main
-    = form_with model: @user, class: "IntroductionForm" do |f|
+    = form_with model: [@user, @introduction], class: "IntroductionForm" do |f|
       %h2.IntroductionForm__top 自己紹介文編集
       .IntroductionForm__middle
         = f.label :title, "タイトル", class: "IntroductionForm-label"

@@ -58,13 +58,13 @@ $cLinkFont: #b59658;
     border-radius: 25px;
     position: absolute;
     left: 74px;
+    background-color: $cHoverIcon;
     transform: translateX(-200%);
     transition: transform 0.5s;
   }
 
   &:hover span {
     transform: none;
-    background-color: $cHoverIcon;
   }
 }
 
@@ -76,4 +76,8 @@ $cLinkFont: #b59658;
     text-decoration: none;
     color: $cFont;
   }
+}
+
+.transnone {
+  transform: none;
 }

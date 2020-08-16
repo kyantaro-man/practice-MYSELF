@@ -4,16 +4,12 @@
       .MenuBox
         .MenuBox-icon
           = icon('fas', 'user-edit')
-        %span.MenuBox-text NOTES
+        %span.MenuBox-text Notes
     = link_to user_introductions_path(current_user.id), class: "MenuBox-link" do
       .MenuBox
         .MenuBox-icon
-          = icon('fas', 'user-edit')
-        %span.MenuBox-text INTRODUCTIONS
-    .MenuBox
-      .MenuBox-icon
-        = icon('fas', 'user-edit')
-      %span.MenuBox-text SelfNote
+          = icon('far', 'comment')
+        %span.MenuBox-text Introductions
   .Sidebar__bottom
     .Rule
       = link_to "#", class: "Rule__link" do

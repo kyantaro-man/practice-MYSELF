@@ -3,10 +3,16 @@
     .Menu
       = icon('fas', 'bars', class: 'Menu-icon')
     .Title
-      .Title__left
-        = icon('fas', 'user-edit', class: 'Title-icon')
-      .Title__right
-        %span.Title-text SELFNOTE
+      - if current_page?(controller: "notes")
+        .Title__left
+          = icon('fas', 'user-edit', class: 'Title-icon')
+        .Title__right
+          %span.Title-text Notes
+      - else current_page?(controller: "introductions")
+        .Title__left
+          = icon('far', 'comment', class: 'Title-icon')
+        .Title__right
+          %span.Title-text Introductions
   .Header__center
     .Search
       %form.Search__form

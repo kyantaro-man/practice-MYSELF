@@ -3,16 +3,10 @@
     .Menu
       = icon('fas', 'bars', class: 'Menu-icon')
     .Title
-      - if current_page?(controller: "notes")
-        .Title__left
-          = icon('fas', 'user-edit', class: 'Title-icon')
-        .Title__right
-          %span.Title-text Notes
-      - else current_page?(controller: "introductions")
-        .Title__left
-          = icon('far', 'comment', class: 'Title-icon')
-        .Title__right
-          %span.Title-text Introductions
+      .Title__left
+        = icon('fas', 'book', class: 'Title-icon')
+      .Title__right
+        %span.Title-text MYSELF
   .Header__center
     .Search
       %form.Search__form
@@ -35,5 +29,5 @@
         = link_to  edit_user_registration_path, class: "User-link" do
           = icon('fas', 'id-card', class: 'User-icon')
       .User__right
-        = link_to "#", class: "User-name" do
+        = link_to root_path, class: "User-name" do
           = current_user.username

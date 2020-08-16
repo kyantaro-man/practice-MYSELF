@@ -23,4 +23,8 @@
 
 .ColorBox {
   display: flex;
+
+  &-btn {
+    margin-right: 5px;
+  }
 }

@@ -5,11 +5,11 @@
     .OptionModal__item
       %h3 カラー
       .ColorBox
-        = button_to "デフォルト", class: "ColorBox-btn"
-        = button_to "ポップ", class: "ColorBox-btn"
-        = button_to "キュート", class: "ColorBox-btn"
-        = button_to "カジュアル", class: "ColorBox-btn"
-        = button_to "インパクト", class: "ColorBox-btn"
+        %button{type: "button", class: "ColorBox-btn", id: "default-color"} デフォルト
+        %button{type: "button", class: "ColorBox-btn", id: "pop-color"} ポップ
+        %button{type: "button", class: "ColorBox-btn", id: "cute-color"} キュート
+        %button{type: "button", class: "ColorBox-btn", id: "cadual-color"} カジュアル
+        %button{type: "button", class: "ColorBox-btn", id: "impact-color"} インパクト
     .OptionModal__item
       %h3 フォント
     = link_to "閉じる", class: "OptionModal__close"

@@ -1,0 +1,15 @@
+.OptionModal
+  .OptionModal__background
+  .OptionModal__content
+    %h2 設定（実装中です）
+    .OptionModal__item
+      %h3 カラー
+      .ColorBox
+        %button{type: "button", class: "ColorBox-btn", id: "default-color"} デフォルト
+        %button{type: "button", class: "ColorBox-btn", id: "pop-color"} ポップ
+        %button{type: "button", class: "ColorBox-btn", id: "cute-color"} キュート
+        %button{type: "button", class: "ColorBox-btn", id: "cadual-color"} カジュアル
+        %button{type: "button", class: "ColorBox-btn"} インパクト
+    .OptionModal__item
+      %h3 フォント
+    = link_to "閉じる", class: "OptionModal__close"

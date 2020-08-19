@@ -29,7 +29,7 @@ https://myselfnote.herokuapp.com/
 
 ## DEMO
 
-<img width="1440" alt="スクリーンショット 2020-08-16 17 54 24" src="https://user-images.githubusercontent.com/67139948/90580377-a76ded80-e203-11ea-9920-c45ceaa51c70.png"
+<img width="1440" alt="スクリーンショット 2020-08-16 17 54 24" src="https://user-images.githubusercontent.com/67139948/90580377-a76ded80-e203-11ea-9920-c45ceaa51c70.png">
 
 ## 工夫したポイント
 

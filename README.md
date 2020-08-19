@@ -15,10 +15,10 @@ MYSELF
 
 https://myselfnote.herokuapp.com/
 
-【テストアカウント&パスワード】
+【テストアカウント】
 
-アカウント: nobita
-
+アカウント名: nobita
+メールアドレス: nobita@gmail.com
 パスワード: nobinobita
 
 ## 制作背景(意図)
